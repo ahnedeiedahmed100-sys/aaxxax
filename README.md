@@ -118,6 +118,9 @@ turso db tokens create media-gen       # ← TURSO_AUTH_TOKEN
 # اختبار e2e كامل للتبديل التسلسلي (يشغّل محاكاة kie.ai داخل الجلسة):
 bash scripts/e2e-mcp.sh
 
+# اختبار الاتصال بقاعدة Turso الحقيقية (يقرأ .env.local وينشئ الجداول ويكتب/يقرأ/يحذف صفًا تجريبيًا):
+node --env-file=.env.local scripts/test-turso.js
+
 # اختبار دمج حقيقي بمقطعين عامين (يتطلب خدمة الدمج على 3001):
 bash scripts/e2e-merge.sh
 
