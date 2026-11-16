@@ -30,8 +30,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files — لا أسرار في Git إطلاقًا؛ نستثني فقط قالب المثال الخالي من القيم
 .env*
+!.env.example
+!.env*.example
 
 # vercel
 .vercel
@@ -46,12 +48,20 @@ local-*
 *.log
 dev.log
 dev.out.log
+server.log
+
+# مجلدات بيئة التطوير غير المخصصة للمستودع
 test
 prompt
-
-server.log
-# Skills directory
+/tests/
+/upload/
+/download/
 /skills/
-# قاعدة بيانات محلية للتطوير
+/examples/
+
+# قواعد بيانات محلية للتطوير
 data/
 data/*.db
+db/*.db
+db/*.db-journal
+merger-site/db/
